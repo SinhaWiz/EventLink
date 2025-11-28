@@ -5,6 +5,8 @@ const morgan = require('morgan');
 
 // Route files
 const auth = require('./routes/authRoutes');
+const events = require('./routes/eventRoutes');
+const registrations = require('./routes/registrationRoutes');
 
 const app = express();
 
@@ -16,6 +18,8 @@ app.use(morgan('dev'));
 
 // Mount routers
 app.use('/api/auth', auth);
+app.use('/api/events', events);
+app.use('/api/registrations', registrations);
 
 // Basic Route
 app.get('/', (req, res) => {
