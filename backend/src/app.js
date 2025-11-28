@@ -7,6 +7,7 @@ const morgan = require('morgan');
 const auth = require('./routes/authRoutes');
 const events = require('./routes/eventRoutes');
 const registrations = require('./routes/registrationRoutes');
+const gamification = require('./routes/gamificationRoutes');
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use(morgan('dev'));
 app.use('/api/auth', auth);
 app.use('/api/events', events);
 app.use('/api/registrations', registrations);
+app.use('/api/gamification', gamification);
 
 // Basic Route
 app.get('/', (req, res) => {
