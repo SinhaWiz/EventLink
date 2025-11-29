@@ -68,13 +68,13 @@ export default function DashboardPage() {
   }
 
   if (loading) {
-     return <div className="p-8 text-orange-600 bg-white rounded">Loading dashboard...</div>;
+     return <div className="p-8 text-orange-500 bg-white rounded">Loading dashboard...</div>;
   }
 
   if (error) {
       return (
         <div className="p-8 bg-white rounded">
-          <p className="text-orange-600 font-bold">{error}</p>
+          <p className="text-orange-500 font-bold">{error}</p>
           <Link href="/auth/login" className="btn mt-4 inline-block">Log in</Link>
         </div>
       );
@@ -86,7 +86,7 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-orange-50 p-8">
       <div className="max-w-6xl mx-auto">
         <header className="flex items-center justify-between mb-8">
-          <h1 className="text-3xl font-bold text-orange-600">Your Dashboard</h1>
+          <h1 className="text-3xl font-bold text-orange-500">Your Dashboard</h1>
           <div className="text-right">
             <div className="text-sm text-orange-500">Welcome back,</div>
             <div className="text-lg font-semibold text-orange-700">{profile?.name}</div>
@@ -97,19 +97,19 @@ export default function DashboardPage() {
         <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           <div className="bg-white p-6 rounded shadow border border-orange-200">
             <div className="text-xs text-orange-500">Points</div>
-            <div className="text-2xl font-bold text-orange-600">{stats?.totalPoints ?? 0}</div>
+            <div className="text-2xl font-bold text-orange-500">{stats?.totalPoints ?? 0}</div>
             <div className="text-sm text-orange-400 mt-2">Earned points across events</div>
           </div>
 
           <div className="bg-white p-6 rounded shadow border border-orange-200">
             <div className="text-xs text-orange-500">Tier</div>
-            <div className="text-2xl font-bold text-orange-600">{stats?.currentTier ?? 'Bronze'}</div>
+            <div className="text-2xl font-bold text-orange-500">{stats?.currentTier ?? 'Bronze'}</div>
             <div className="text-sm text-orange-400 mt-2">Your current gamification tier</div>
           </div>
 
           <div className="bg-white p-6 rounded shadow border border-orange-200">
             <div className="text-xs text-orange-500">Participation</div>
-            <div className="text-2xl font-bold text-orange-600">{stats?.totalEventsCompleted ?? 0} / {stats?.totalEventsRegistered ?? 0}</div>
+            <div className="text-2xl font-bold text-orange-500">{stats?.totalEventsCompleted ?? 0} / {stats?.totalEventsRegistered ?? 0}</div>
             <div className="text-sm text-orange-400 mt-2">Completed / Registered</div>
           </div>
         </section>
@@ -117,7 +117,7 @@ export default function DashboardPage() {
         {/* Achievements & Badges */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           <div className="bg-white p-6 rounded shadow border border-orange-200 md:col-span-2">
-            <h2 className="text-lg font-semibold mb-4 text-orange-600">Registered Events</h2>
+            <h2 className="text-lg font-semibold mb-4 text-orange-500">Registered Events</h2>
             {registrations.length === 0 && <p className="text-orange-400">No data available</p>}
             <div className="space-y-4">
               {registrations.map((r) => {
@@ -132,7 +132,7 @@ export default function DashboardPage() {
                       {r.status === 'Completed' ? (
                         <div className="text-sm text-green-600 font-medium">Completed</div>
                       ) : (
-                        <div className="text-sm text-orange-600 font-medium">{formatRemaining((new Date(r.event.date)).getTime() - now)} remaining</div>
+                        <div className="text-sm text-orange-500 font-medium">{formatRemaining((new Date(r.event.date)).getTime() - now)} remaining</div>
                       )}
                     </div>
                   </div>
@@ -142,7 +142,7 @@ export default function DashboardPage() {
           </div>
 
           <div className="bg-white p-6 rounded shadow border border-orange-200">
-            <h2 className="text-lg font-semibold mb-4 text-orange-600">Achievements & Badges</h2>
+            <h2 className="text-lg font-semibold mb-4 text-orange-500">Achievements & Badges</h2>
             <div className="space-y-3">
               {achievements.length === 0 && <div className="text-sm text-orange-400">No data available</div>}
               {achievements.map(a => (
@@ -154,7 +154,7 @@ export default function DashboardPage() {
 
               <div className="mt-2 border-t pt-2">
                 {badges.map(b => (
-                  <div key={b.id} className="text-xs text-orange-600 py-1">🏅 {b.title} — {b.description}</div>
+                  <div key={b.id} className="text-xs text-orange-500 py-1">🏅 {b.title} — {b.description}</div>
                 ))}
               </div>
             </div>
@@ -164,7 +164,7 @@ export default function DashboardPage() {
         {/* Certificates & History */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
           <div className="bg-white p-6 rounded shadow border border-orange-200">
-            <h2 className="text-lg font-semibold mb-4 text-orange-600">Certificates</h2>
+            <h2 className="text-lg font-semibold mb-4 text-orange-500">Certificates</h2>
             {certificates.length === 0 && <div className="text-sm text-orange-400">No data available</div>}
             <div className="space-y-3">
               {certificates.map(c => (
@@ -180,7 +180,7 @@ export default function DashboardPage() {
           </div>
 
           <div className="bg-white p-6 rounded shadow border border-orange-200">
-            <h2 className="text-lg font-semibold mb-4 text-orange-600">Participation History</h2>
+            <h2 className="text-lg font-semibold mb-4 text-orange-500">Participation History</h2>
             {history.length === 0 && <div className="text-sm text-orange-400">No data available</div>}
             <div className="space-y-2 text-sm text-orange-700">
               {history.map(h => (

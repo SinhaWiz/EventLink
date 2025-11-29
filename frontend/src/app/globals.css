@@ -36,8 +36,8 @@ body {
 }
 
 button, .btn {
-  background: var(--button-bg);
-  color: var(--button-text);
+  background: #fff;
+  color: #ff6600;
   border: none;
   padding: 0.5em 1.2em;
   border-radius: 6px;
@@ -45,13 +45,15 @@ button, .btn {
   cursor: pointer;
   transition: background 0.2s;
 }
+
 button:hover, .btn:hover {
-  background: var(--button-hover-bg);
+  background: #ff6600;
+  color: #fff;
 }
 
 input, textarea, select {
   background: var(--input-bg);
-  color: var(--input-text);
+  color: #000;
   border: 1px solid var(--button-bg);
   border-radius: 4px;
   padding: 0.4em 0.8em;

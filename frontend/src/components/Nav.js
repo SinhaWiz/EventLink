@@ -58,7 +58,7 @@ export default function Nav() {
   return (
     <nav className="bg-orange-50 shadow-sm p-4 border-b border-orange-200">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-orange-600">EventLink</Link>
+        <Link href="/" className="text-2xl font-bold text-orange-500">EventLink</Link>
 
         <div className="flex items-center gap-4">
           {authenticated ? (
@@ -68,7 +68,7 @@ export default function Nav() {
             </>
           ) : (
             <>
-              <Link href="/auth/login" className="text-orange-600 hover:text-orange-700 font-semibold">Login</Link>
+              <Link href="/auth/login" className="text-orange-500 hover:text-orange-700 font-semibold">Login</Link>
               <Link href="/auth/register" className="btn">Register</Link>
             </>
           )}
