@@ -16,7 +16,7 @@ export default function Home() {
         <div className="space-x-4">
           <Link
             href="/auth/register"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700"
+            className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-50"
           >
             Get Started
           </Link>

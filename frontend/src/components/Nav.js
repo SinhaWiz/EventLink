@@ -56,20 +56,20 @@ export default function Nav() {
   }
 
   return (
-    <nav className="bg-white shadow-sm p-4">
+    <nav className="bg-orange-50 shadow-sm p-4 border-b border-orange-200">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-blue-600">EventLink</Link>
+        <Link href="/" className="text-2xl font-bold text-orange-600">EventLink</Link>
 
         <div className="flex items-center gap-4">
           {authenticated ? (
             <>
-              <Link href="/events" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Browse Events</Link>
-              <button onClick={handleLogout} className="px-4 py-2 border border-red-300 text-red-600 rounded hover:bg-red-50">Logout</button>
+              <Link href="/events" className="btn">Browse Events</Link>
+              <button onClick={handleLogout} className="btn" style={{background: 'white', color: '#ff6600', border: '1px solid #ff6600'}}>Logout</button>
             </>
           ) : (
             <>
-              <Link href="/auth/login" className="text-gray-600 hover:text-blue-600">Login</Link>
-              <Link href="/auth/register" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Register</Link>
+              <Link href="/auth/login" className="text-orange-600 hover:text-orange-700 font-semibold">Login</Link>
+              <Link href="/auth/register" className="btn">Register</Link>
             </>
           )}
         </div>
