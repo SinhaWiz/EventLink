@@ -31,7 +31,8 @@ export default function Register() {
       localStorage.setItem('user', JSON.stringify(res.data.user));
       router.push('/');
     } catch (err) {
-      setError(err.response?.data?.error || 'Registration failed');
+      console.error('Registration Error:', err);
+      setError(err.response?.data?.error || err.message || 'Registration failed');
     }
   };
 
