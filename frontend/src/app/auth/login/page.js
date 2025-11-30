@@ -18,7 +18,10 @@ export default function Login() {
       const res = await api.post('/auth/login', { email, password });
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
-      router.push('/'); // Redirect to home/dashboard
+      // Notify other components in this tab that auth changed (Nav listens)
+      if (typeof window !== 'undefined') window.dispatchEvent(new Event('auth-changed'));
+      // Redirect directly to the dashboard page after login
+      router.push('/dashboard');
     } catch (err) {
       setError(err.response?.data?.error || 'Login failed');
     }

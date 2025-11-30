@@ -29,7 +29,10 @@ export default function Register() {
       const res = await api.post('/auth/register', formData);
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
-      router.push('/');
+      // Notify other components that auth changed so Nav updates immediately
+      if (typeof window !== 'undefined') window.dispatchEvent(new Event('auth-changed'));
+      // Redirect into the dashboard after registration
+      router.push('/dashboard');
     } catch (err) {
       setError(err.response?.data?.error || 'Registration failed');
     }
