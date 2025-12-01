@@ -34,7 +34,8 @@ export default function Register() {
       // Redirect into the dashboard after registration
       router.push('/dashboard');
     } catch (err) {
-      setError(err.response?.data?.error || 'Registration failed');
+      console.error('Registration Error:', err);
+      setError(err.response?.data?.error || err.message || 'Registration failed');
     }
   };
 
