@@ -50,7 +50,7 @@ export default function Register() {
             <input
               type="text"
               name="name"
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded text-black"
               value={name}
               onChange={onChange}
               required
@@ -61,7 +61,7 @@ export default function Register() {
             <input
               type="email"
               name="email"
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded text-black"
               value={email}
               onChange={onChange}
               required
@@ -72,7 +72,7 @@ export default function Register() {
             <input
               type="password"
               name="password"
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded text-black"
               value={password}
               onChange={onChange}
               required
@@ -84,7 +84,7 @@ export default function Register() {
             <input
               type="text"
               name="phone"
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded text-black"
               value={phone}
               onChange={onChange}
               required
@@ -95,7 +95,7 @@ export default function Register() {
             <input
               type="text"
               name="university"
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded text-black"
               value={university}
               onChange={onChange}
               required
@@ -106,7 +106,7 @@ export default function Register() {
             <input
               type="text"
               name="department"
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded text-black"
               value={department}
               onChange={onChange}
             />
