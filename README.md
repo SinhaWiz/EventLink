@@ -27,7 +27,7 @@ API endpoint (protected): GET /api/gamification/dashboard/me
 Example cURL (replace <TOKEN> with your bearer token):
 
 ```bash
-curl -H "Authorization: Bearer <TOKEN>" http://localhost:5000/api/gamification/dashboard/me
+curl -H "Authorization: Bearer <TOKEN>" https://event-link-six.vercel.app//api/gamification/dashboard/me
 ```
 
 Certificates are available at GET /api/certificates/:registrationId (protected). This is currently a placeholder implementation which returns a JSON stub. In future this can be extended to generate and return real PDF certificates.
